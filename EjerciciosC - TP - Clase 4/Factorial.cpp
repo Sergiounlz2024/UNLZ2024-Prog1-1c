@@ -5,22 +5,29 @@ using namespace std;
 
 int main(){
 	
-	//Calcular factorial de un número usando un ciclo
-	int valor = 0;
-	int factorial = 1;
-	int total = 0;
-	cout<<"Ingrese un valor para realizar su factorial"<<endl;
-	cin>>valor;
+	//Calcular factorial de un nï¿½mero usando un ciclo
+	int valor = 0; //Declaraciï¿½n de variables necesarias
+	int factorial = 1; //Declaraciï¿½n de variables necesarias
+ 	int total = 1; //Declaraciï¿½n de variables necesarias
+ 	
+	cout<<"Ingrese un valor para realizar su factorial"<<endl; //Solicitud de ingreso por teclado un valor
+	cin>>valor; //Ingreso por teclado
 	
-	while(valor<= 0){
-		cout<<"El valor es 0 o negativo. No se puede realizar un factorial. Ingrese nuevamente un número"<<endl;
-		cin>>valor;
+	while(valor<= 0){ //Validaciï¿½n para que no se pueda ingresar 0 o nï¿½meros negativos
+		cout<<"El valor es 0 o negativo. No se puede realizar un factorial. Ingrese nuevamente un nï¿½mero"<<endl; //Aviso por pantalla 
+		cin>>valor; //Ingreso valor nuevamente si fue errï¿½neo
 	
 	}
-	while (valor>=factorial) 
+	 	cout<<"Factorial de "<<valor<<endl;
+	while (valor>=factorial) //Mientras el valor ingresado sea >= al factorial continï¿½a ejecutï¿½ndose
 	{
-		total = factorial * valor;
-		cout<< "Factorial: "<<valor<<" x "<< factorial<<" = "<<total<<endl;
-		factorial++;
+		total = total * factorial; //OperaciÃ³n
+		if(total<=0){
+			cout<<factorial<<" = Este valor es negativo"<<endl; //Muestro resultado negativo
+			factorial++; //Aumento factorial
+		}else{
+		cout<<factorial<<" = "<<total<<endl; //Resultado
+		factorial++; //Aumento de factorial en cada vuelta del ciclo
+		}
 	}
 }
