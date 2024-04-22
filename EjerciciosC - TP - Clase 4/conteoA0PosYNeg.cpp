@@ -5,7 +5,6 @@ using namespace std;
 
 int main()
 {
-
     int inicio = 0; //Declaración de valores
     int contador = 1; //Declaración de valores
 
